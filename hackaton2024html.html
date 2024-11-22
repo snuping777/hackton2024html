@@ -12,4 +12,164 @@
 </body>
 </html>
 
+
+
+
 #2
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta de Perfil</title>
+</head>
+<body>
+    <div>
+        <img src="https://randomuser.me/api/portraits/women/79.jpg" alt="Mujer de perfil">
+        <h2>Ana López</h2>
+        <h3>Diseñadora Gráfica</h3>
+        <p>Creativa y apasionada del diseño, Ana cuenta con más de 5 años de experiencia en la creación de identidades visuales y campañas publicitarias.</p>    
+        <h4>Contacto:</h4>
+        <p>Email: <a href="mailto:ana.lopez@email.com">ana.lopez@email.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/analópezdesigns" target="_blank">linkedin.com/in/analópezdesigns<…
+
+
+
+            
+#3
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        #taskInput {
+            padding: 10px;
+            width: 70%;
+        }
+        #addTaskBtn {
+            padding: 10px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #fff;
+            margin: 5px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .deleteBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mi Lista de Tareas</h1>
+    <input type="text" id="taskInput" placeholder="Escribe una tarea...">
+    <button id="addTaskBtn">Agregar</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        //Obtener elementos del DOM
+        var taskInput = document.getElementById('taskInput');
+        var addTaskBtn = document.getElementById('addTaskBtn');
+        var taskList = document.getElementById('taskList');
+
+        // para agregar tarea
+        addTaskBtn.onclick = function() {
+            //Obtener el valor del campo de entrada
+            var taskValue = taskInput.value;
+
+            //Validar que no esté vacío
+            if (taskValue === '') {
+                alert('Por favor, ingresa una tarea.');
+                return; // Salir de la función si está vacío
+            }
+
+            //un nuevo elemento de lista
+            var li = document.createElement('li');
+            li.textContent = taskValue; // Establecer el texto de la tarea
+
+            //el botón de eliminar
+            var deleteBtn = document.createElement('button');
+            deleteBtn.textContent = 'Eliminar';
+            deleteBtn.className = 'deleteBtn';
+
+            //Función para eliminar la tarea
+            deleteBtn.onclick = function() {
+                taskList.removeChild(li); // Eliminar el elemento de la lista
+            };
+            //el botón de eliminar al elemento de lista
+            li.appendChild(deleteBtn);
+            //el nuevo elemento de lista a la lista de tareas
+            taskList.appendChild(li);
+            //Limpiar el campo de entrada
+            taskInput.value = '';
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+#4
+<html lang="en">
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Contact Form
+</title> <style> body 
+{ font-family: Arial, sans-serif; }
+form { width: 300px; margin: 0 auto; }
+label { display: block; margin-top: 10px; } 
+input[type="text"], input[type="email"],
+textarea { width: 100%; padding: 5px; }
+button { background-color: blue; color: white; border: none; padding: 10px; cursor: pointer; margin-top: 10px; } 
+.success { color: green; margin-top: 10px; display: none; }
+</style> <form id="contactForm">
+<label for="name">Name:
+</label> 
+<input type="text" id="name" required>
+<label for="email">Email:</label>
+<input type="email" id="email" required>
+
+<label for="message">Message:</label>
+<textarea id="message" rows="4" required></textarea>
+
+<button type="submit">Submit</button>
+</form>
+    <p class="success" id="successMessage">
+        Your message has been sent successfully!
+    </p> 
+    <script>
+        document.getElementById("contactForm")
+            .addEventListener("submit", function(event) 
+    { event.preventDefault();
+     const name = document.getElementById("name"); 
+     const email = document.getElementById("email"); 
+     const message = document.getElementById("message"); 
+     const successMessage = document.getElementById("successMessage"); 
+     if (name.checkValidity() && email.checkValidity() && message.checkValidity()) 
+     </script> 
+</html>
+
+#5"no pude hacer el reloj porque no se javescript"
